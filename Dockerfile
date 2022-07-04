@@ -4,7 +4,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pip \
     && \
     apt-get clean
-RUN pip install -r requirements.txt
 RUN pip3 install setuptools-rust
 RUN pip3 install flask 
 COPY app.py /opt/
