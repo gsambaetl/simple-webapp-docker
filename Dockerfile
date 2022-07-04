@@ -3,8 +3,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3.5 \
     python3-pip \
     && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get clean
 RUN pip3 install --upgrade pip3
 RUN pip3 install -r requirements.txt
 RUN pip3 install setuptools-rust
