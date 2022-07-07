@@ -4,8 +4,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pip \
     && \
     apt-get clean
-RUN pip3 install setuptools-rust
-RUN pip3 install flask
+RUN python -m pip install --upgrade pip setuptools wheel
+RUN pip install setuptools-rust
+RUN pip install flask
 RUN mkdir /opt
 ADD folder /opt/app.py
 WORKDIR /opt/app.py
